@@ -1,0 +1,31 @@
+{
+  "name": "dynauth-dev",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Local development playground for dynauth",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "ts-node-dev --respawn server/index.ts",
+    "dev:client": "vite client",
+    "lint": "eslint server/ client/"
+  },
+  "dependencies": {
+    "@dynauth/core": "workspace:*",
+    "@mui/material": "^5.0.0",
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "express": "^4.18.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "concurrently": "^8.0.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0",
+    "@vitejs/plugin-react": "^4.0.0"
+  }
+}
