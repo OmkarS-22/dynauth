@@ -47,7 +47,7 @@ const errorRegistry: ErrorRegistry = {
   },
   [AuthErrorCode.SESSION_STORE_UNAVAILABLE]: {
     httpStatus: 503,
-    retryable: false,
+    retryable: true,
   },
 }
 
