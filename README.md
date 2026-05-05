@@ -88,7 +88,7 @@ pnpm dev          # watch mode for this package only
 
 ### V1 — Core Authentication
 - [x] Monorepo setup
-- [ ] Types and contracts
+- [x] Types and contracts
 - [ ] Password hashing and session management
 - [ ] Express route handlers — register, login, logout, me
 - [ ] Headless React hooks — useAuthForm, useSession, useFieldValidation
