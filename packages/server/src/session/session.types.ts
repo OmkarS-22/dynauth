@@ -1,6 +1,6 @@
 type AuthMethod = 'password' | 'google' | 'github' | 'saml'
 
-type Provider = 'google' | 'github'
+export type Providers = 'password' | 'google' | 'github'
 
 export interface SessionRecord {
   sessionId: string
@@ -14,7 +14,7 @@ export interface SessionRecord {
   accessTokenExpiresAt: Date | null
   refreshToken: string | null
   refreshTokenExpiresAt: Date | null
-  provider: Provider | null
+  provider: Providers | null
 
   userAgent?: string
   ipAddress?: string

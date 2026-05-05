@@ -8,3 +8,8 @@ export const enum AuthErrorCode {
   TOO_MANY_ATTEMPTS = 'TOO_MANY_ATTEMPTS',
   SESSION_STORE_UNAVAILABLE = 'SESSION_STORE_UNAVAILABLE',
 }
+export interface NormalisedError {
+  success: false
+  fieldErrors?: Record<string, string>
+  formError?: string
+}
