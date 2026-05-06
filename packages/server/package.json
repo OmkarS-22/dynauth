@@ -23,19 +23,19 @@
     "clean": "rm -rf dist .tsbuildinfo"
   },
   "dependencies": {
-    "bcrypt": "^5.0.0",
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
     "ioredis": "^5.0.0",
-    "uuid": "^9.0.0",
-    "cookie-parser": "^1.4.6"
+    "uuid": "^9.0.0"
   },
   "peerDependencies": {
     "express": ">=4.0.0"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
-    "@types/uuid": "^9.0.0",
     "@types/cookie-parser": "^1.4.6",
     "@types/express": "^4.17.0",
+    "@types/uuid": "^9.0.0",
     "express": "^4.18.0",
     "typescript": "^5.0.0",
     "vitest": "^1.0.0"
