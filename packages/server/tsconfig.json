@@ -5,8 +5,10 @@
     "rootDir": "src",
     "tsBuildInfoFile": ".tsbuildinfo",
     "composite": true,
-    "lib": ["ES2020"]
+    "lib": ["ES2020"],
+    "types": ["vitest/globals"]
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "**/*.test.ts"]
+  "exclude": ["node_modules", "dist"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
