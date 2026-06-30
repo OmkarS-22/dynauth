@@ -52,15 +52,15 @@ const errorRegistry: ErrorRegistry = {
 }
 
 export class AuthError extends Error {
-  code: AuthErrorCode
+  // code: AuthErrorCode
   httpStatus: number
   retryable: boolean
   field?: string | undefined
 
-  constructor(code: AuthErrorCode) {
+  constructor(public readonly code: AuthErrorCode) {
     super(code)
     this.name = 'AuthError'
-    this.code = code
+    // this.code = code
 
     const meta = errorRegistry[code]
     this.httpStatus = meta.httpStatus

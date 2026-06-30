@@ -1,14 +1,21 @@
 import type { Providers } from '../session/session.types'
 
-type TTL = number
+export type TTL = number
 
-interface Session {
-  store: unknown
+export interface Store {
+  host: string
+  port: number
+  password?: string
+  tls?: boolean
+}
+
+export interface Session {
+  store: Store
   ttl: TTL
   rolling: boolean
 }
 
-interface Tokens {
+export interface Tokens {
   access: {
     ttl: TTL
   }
@@ -17,20 +24,20 @@ interface Tokens {
   }
 }
 
-type ProvidersConfig = Record<Providers, { enabled: boolean }>
+export type ProvidersConfig = Record<Providers, { enabled: boolean }>
 
-interface RateLimit {
+export interface RateLimit {
   enabled: boolean
   maxAttempts: number
   windowMs: number
 }
 
-interface Security {
+export interface Security {
   rateLimit: RateLimit
   ipTracking: boolean
 }
 
-interface Cookie {
+export interface Cookie {
   name: string
   secure: boolean
   sameSite: 'strict' | 'lax' | 'none'
